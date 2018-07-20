@@ -99,7 +99,7 @@ nvm-windows(Windows)
 
 ![web2.png](https://upload-images.jianshu.io/upload_images/2369419-ed58c947c5bab287.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###NPM
+### NPM
 - npm(Node Package Manager, node包管理器) Node.js默认的，用javascript编写的管理器。管理和存储了大量第三方的javascript代码库，供开发者使用
 - npm是Node.js默认的软件包管理系统，安装Node.js后，会默认安装npm
   + npm -v
@@ -107,8 +107,11 @@ nvm-windows(Windows)
 - [npm官方网站](https://www.npmjs.com)
 - [npm官方文档](https://docs.npmjs.com)
 
-###Modules 与 Packages
+### Modules 与 Packages
 1. A module is any file or directory that can be loaded by  Node.js ' require()
 + 模块可以是任何一个文件或目录 （目录下面可以有多个文件），只要能被node.js通过require（）引用即可。
 2. A package is a file or direcotory than is described by a package.json. This can hanppen in a bunch of different ways
 + 包是一个文件或目录（目录下可以有多个文件）必须 有一个package.json文件来描述，就是一个包，通常也是一个小项目。
+
+### require加载过程的坑
+![require1.png](https://upload-images.jianshu.io/upload_images/2369419-753aded0ab3c417c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

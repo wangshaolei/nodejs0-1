@@ -9,9 +9,9 @@ router.get('/', function (req, res, next) {
 //这里用别名占位,路由文件直接/
 module.exports = function(app){
 
-  app.use('/users', require('./users'));
+  app.use('/users', require('./users.js'));
 
-  app.use('/db', require('./db'));
-  app.use('/add', require('./add'));
+  app.use('/db', require('./db.js'));
+  app.use('/add', require('./add.js'));
 
 };
