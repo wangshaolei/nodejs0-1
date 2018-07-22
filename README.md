@@ -115,3 +115,14 @@ nvm-windows(Windows)
 
 ### require加载过程的坑
 ![require1.png](https://upload-images.jianshu.io/upload_images/2369419-753aded0ab3c417c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### require加载注意
+![require2.PNG](https://upload-images.jianshu.io/upload_images/2369419-77e9a91bd42597aa.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### Node.js 与 CommonJS
+![CommonJS.PNG](https://upload-images.jianshu.io/upload_images/2369419-0025941dbdd5b8b7.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 模块化思想exports 与 module.exports
++ 在同一个.js文件或同一个模块下面,exports 和 module.exports 指向的是同一个对象
++ 最终 require() 函数返回的是module.exports中的数据
++ exports 在同一.js文件或同一模块下面通常是一个 快捷指向方式的一个角色，一般在实际应用开发中使用module.exports 为标准。
