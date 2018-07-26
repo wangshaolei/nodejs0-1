@@ -1,17 +1,21 @@
 
 var express = require('express');
 var router = express.Router();
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  	res.render('index', { title: 'Express' });
-});
 
-//这里用别名占位,路由文件直接/
-module.exports = function(app){
+router.use('/', require('./home.js'));
+router.use('/users', require('./users.js'));
 
-  app.use('/users', require('./users.js'));
+router.use('/db', require('./db.js'));
+router.use('/add', require('./add.js'));
 
-  app.use('/db', require('./db.js'));
-  app.use('/add', require('./add.js'));
+module.exports = router;
 
-};
+// module.exports = function(router){
+//   router.use('/', require('./home.js'));
+//   router.use('/users', require('./users.js'));
+  
+//   router.use('/db', require('./db.js'));
+//   router.use('/add', require('./add.js'));
+// };
+
+

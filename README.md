@@ -103,7 +103,8 @@ nvm-windows(Windows)
 - npm(Node Package Manager, node包管理器) Node.js默认的，用javascript编写的管理器。管理和存储了大量第三方的javascript代码库，供开发者使用
 - npm是Node.js默认的软件包管理系统，安装Node.js后，会默认安装npm
   + npm -v
-  + npm install 
+  + npm init -y 创建package.json管理文件
+  + npm install module_name  安装模块
 - [npm官方网站](https://www.npmjs.com)
 - [npm官方文档](https://docs.npmjs.com)
 
@@ -126,3 +127,32 @@ nvm-windows(Windows)
 + 在同一个.js文件或同一个模块下面,exports 和 module.exports 指向的是同一个对象
 + 最终 require() 函数返回的是module.exports中的数据
 + exports 在同一.js文件或同一模块下面通常是一个 快捷指向方式的一个角色，一般在实际应用开发中使用module.exports 为标准。
+
+### express
++ 基于Node.js平台开发的web开发框架 ，就是一个node.js模块
++ express它提供一系列强大的特性，帮你创建各种web和移动设备应用
+  - 它实现了路由功能
+  - 中间件（函数）功能
+  - 对req和res对象的扩展
+  - 可以集成其他模板引擎
++ http://expressjs.com
++ http://expressjs.com.cn
+
+### express res.end 与 res.send
++ 参数类型
+  - res.send()参数可以是 Buffer object、a String、an Object、an Array
+  - res.end() 参数只能是 Buffer object、a String
++ res.send() 响应时res自动添加Content-Type: text/html; charset utf-8 报文头，防止乱码
+
+### express use() 
+  + 在进行路由匹配的时候不限定方法
+  + 请求路径第一部分匹配只要与指定的相等即可，不要求pathname完全匹配
+  + 用use() 挂静态资源express.static() 如果第一个参数 写多次 不同路径 指向同一资源文件夹，则都可以访问
+    - app.use('/index', express.static(path.join('__dirname', 'public')));
+    - app.use('/index1', express.static(path.join('__dirname', 'public'))); 
+    - /index和/.index1都可以访问
+  + 如果use 第一个路径参数一样，第二个资源指向不一样，则访问时 取并集查询加载
+### express all()
+  - 在进行路由匹配的时候不限定方法
+  - 请求路径要与pathname完全匹配
+
