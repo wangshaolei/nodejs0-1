@@ -61,6 +61,11 @@ node.js 全栈开发技术栈 MEAN- MongoDB Express Angular Node.js
 创建完两个空文件夹之后，打开cmd命令窗口，输入
 npm config set prefix "D:\Develop\nodejs\node_global"
 npm config set cache "D:\Develop\nodejs\node_cache"
+如果这种方法无法修改还可以：
+在nodejs的安装目录中找到node_modules\npm\.npmrc文件
+修改如下即可：
+prefix = D:\Develop\nodejs\node_global
+cache = D:\Develop\nodejs\node_cache
 
 ![12.png](https://upload-images.jianshu.io/upload_images/2369419-fab172bfc9e76f48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
